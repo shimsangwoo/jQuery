@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery-animate</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./app.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main">
+        <h1>animate</h1>
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+        <div class="box box5"></div>
+      </div>
+    </div>
+
+    <div class="btns">
+      <div></div>
+    </div>
+
+    <script>
+      var box1 = $('.box1')
+      var box2 = $('.box2')
+      var box3 = $('.box3')
+      var box4 = $('.box4')
+      var box5 = $('.box5')
+
+      var btn1 = $('.btn1')
+      var btn2 = $('.btn2')
+      var btn3 = $('.btn3')
+      var btn4 = $('.btn4')
+      var btn5 = $('.btn5')
+
+      var text =$('.text')
+
+      btn1.click(function () {
+        box1.animate({ width: 600 }, 1000)
+      })
+
+      btn2.on('click', function(){
+        box2.animate({width:600}, 3000, function(){
+            box2.animate({width:500},500)
+        })
+      })
+
+      btn3.on('click',function(){
+        $(this).animate({left:500}, 300, function(){
+            $(this).animate({width30,height30}, 1000, function
+            )
+        }){
+            left:500
+        }
+      })
+
+      text.on('mouseover', function(){
+        text.animate({fontSize:50}, 'fast')
+      }).on('mouseleave',)
+
+      /* 600'''px'''을 적으면 문자열이 되기 때문에 Qutation을 넣어야 한다.*/
+    </script>
+  </body>
+</html>

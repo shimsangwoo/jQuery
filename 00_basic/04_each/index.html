@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery-each</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container"></div>
+    <h1>each</h1>
+    <div class="card">
+      <div class="photo">
+        <img src="../images/img_01.jpg" alt="" />
+      </div>
+    </div>
+
+    <div>
+      <h2>this is title</h2>
+    </div>
+    <div>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
+        voluptatibus officia architecto exercitationem eos nostrum a similique
+        tempore soluta. Soluta.
+      </p>
+    </div>
+
+    <script>
+      var sns = $('.sns')
+      var item =$('.sns i')
+
+      sns.hover(
+          function(){
+              item.each(function(index)){
+                  console.log(index)
+                  $(this)
+                  .stop()
+                  .animate
+
+              }
+          },
+          function(){}
+      )
+    </script>
+  </body>
+</html>

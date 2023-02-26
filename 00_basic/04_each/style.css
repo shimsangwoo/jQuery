@@ -1,0 +1,32 @@
+img {
+  width: 100%;
+  display: block;
+}
+
+.card {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.info {
+  padding: 20px;
+  background-color: #ddd;
+}
+
+.info h2 {
+  margin-bottom: 12px;
+}
+
+
+.sns i{
+    position: absolute;
+    top: 0;
+
+}
+
+
+.sns i : :first-child{
+    background
+    z-index: 1;
+    border-radius
+}
