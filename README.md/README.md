@@ -1,17 +1,7 @@
-# 안녕하세요
+# jquery tutorial
 
-## 반가워요
+### manific popup
 
-#### 반가워요
+### slic slide
 
-```
-$(document).ready(function(){
-
-    var btn = $('.btn')
-    btn.on('click', function(){
-        alert('hello')
-    })
-
-  });
-
-```
+### scroll reveal

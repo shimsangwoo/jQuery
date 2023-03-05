@@ -1,0 +1,25 @@
+.main {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+btns {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.main p {
+  margin-top: 30px;
+}
+
+.sigle,
+.galler {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
