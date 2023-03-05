@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery-fade</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>auto fade</h1>
+      <ul class="slide">
+        <li class="item"><img src="../images/img_01.jpg" alt="" /></li>
+        <li class="item"><img src="../images/img_02.jpg" alt="" /></li>
+        <li class="item"><img src="../images/img_03.jpg" alt="" /></li>
+        <li class="item"><img src="../images/img_04.jpg" alt="" /></li>
+      </ul>
+    </div>
+
+    <script>
+      var items = $('.item') /** 리스트형태로 저장됨 */
+      var currentIndex = 0 /** 하드코딩 대신 이럲게 변수를 지정하고 숫자를 올린다.*/
+      var interval = 1000
+      var timer /**선언안해도 돌아간다*/
+
+      console.log(items)
+
+      function stop() {
+        clearInterval(timer)
+        console.log('stop....')
+      }
+      function play() {
+        timer = setInterval(() => {
+          var nextIndex = (currentIndex + 1) % items.length
+          item.eq(currentIndex).fadeOut()
+          item.eq(nextIndex).fadeIn()
+          currentIndex = nextIndex
+        }, interval) /**셋인터벌 함수 일정한 시간이 지나면 변화*/
+      }
+      /**변수에 등록! 변수를 실행하지 않았는데도 돌아간다. 엄밀하지 못하다. 제이쿼리 단점*/
+
+      function init() {
+        items.eq(currentIndex).show()
+        play()
+        items.hover(
+          stop,
+          play
+        ) /**마우스가 올라갔을 때 호버함수(마우스 올라갔을 때, 마우스리브 됐을때)*/
+      }
+
+      init()
+    </script>
+  </body>
+</html>
